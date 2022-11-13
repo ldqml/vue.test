@@ -1,0 +1,31 @@
+<template>
+  <div class="demo">
+    <h1 ref="h1">学校信息</h1>
+    <h3 ref="h3">学校名称:{{name}}</h3>
+    <h3>学校地址:{{address}}</h3>
+    <button ref="btn" @click="ti">点我显示内容</button>
+  </div>
+</template>
+
+<script>
+export default {
+    name:'SchoolName',
+    data() {
+        return {
+        }
+    },
+    methods:{
+      ti(){
+        console.log(this.$refs.h3)
+        console.log(this.$refs.btn)
+      }
+    },
+    props:['name','address']
+}
+</script>
+
+<style>
+.demo {
+    background-color: aqua;
+}
+</style>
